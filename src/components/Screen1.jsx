@@ -1,4 +1,5 @@
 import React from 'react';
+import myImage from '../assets/cureAiLogo.png';
 
 const CureAILanding = () => {
   return (
@@ -6,16 +7,13 @@ const CureAILanding = () => {
       <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-8 space-y-8">
         <div className="flex flex-col items-center space-y-6">
           {/* Logo */}
-          <div className="text-blue-600">
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-16 h-16"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-6h2v2h-2v-2zm0-8h2v6h-2V6z" />
-            </svg>
+          <div className="flex items-center justify-center">
+           <img 
+            src={myImage}  
+            alt="CURE.AI Logo" 
+            className="w-[10] h-[10]" 
+            />
           </div>
-          
           {/* Brand Name */}
           <div className="text-blue-600 text-2xl font-bold">
             CURE.AI
