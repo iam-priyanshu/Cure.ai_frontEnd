@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Recaptcha from "./components/Recapcha"; 
 import Screen1 from "./components/Screen1";
 import Screen2 from "./components/Screen2";
-import Screen3 from "./components/screen3";
+import Screen3 from "./components/Screen3";
 import Screen4 from "./components/Screen4";
 import Screen5 from "./components/Screen5";
 import Screen6 from "./components/Screen6";
