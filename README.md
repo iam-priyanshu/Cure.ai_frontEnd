@@ -56,6 +56,8 @@ This repository contains the frontend code for the **Cure.AI** project, a web-ba
    ```sh
    npm run dev
    ```
+## Website Link
+- https://cure-ai-front-end-j6lw.vercel.app
 
 ## Troubleshooting
 - If you encounter errors related to missing assets, ensure that `cureAiLogo.png` and `userProfile.png` are correctly placed inside the `src/assets` directory.
