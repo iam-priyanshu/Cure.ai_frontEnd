@@ -11,8 +11,10 @@ const Screen4 = () => {
       <div className="w-80 bg-white shadow-lg p-6 flex flex-col">
         {/* Logo */}
         <div className="flex flex-col items-center mb-8">
-          <img src={myImage} alt="CURE.AI Logo" className="w-36 h-36 mb-2" />
-          <span className="text-blue-600 font-bold text-xl"></span>
+          <img src={myImage} 
+          alt="CURE.AI Logo" 
+          className="w-36 h-36 mb-2" 
+          />
         </div>
 
         {/* Profile Section */}

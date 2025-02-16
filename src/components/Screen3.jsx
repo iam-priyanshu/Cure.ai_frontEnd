@@ -8,8 +8,9 @@ const Screen3 = () => {
       {/* Left sidebar */}
       <div className="w-full md:w-80 p-6 flex flex-col border-r border-gray-200">
         <div className="flex flex-col items-center mb-10">
-          <img src={myImage} alt="CURE.AI Logo" className="w-32 h-32 mb-2" />
-          <span className="text-blue-600 font-bold text-xl"></span>
+          <img src={myImage} 
+          alt="CURE.AI Logo" 
+          className="w-32 h-32" />
         </div>
         
         <div className="flex flex-col items-center mb-8">

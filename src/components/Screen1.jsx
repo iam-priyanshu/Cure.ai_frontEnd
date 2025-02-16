@@ -1,26 +1,22 @@
 import React from 'react';
-import myImage from '../assets/cureAiLogo.png';
+import myImage from "../assets/cureAiLogo.png";
 
-const CureAILanding = () => {
+const Screen1 = () => {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-5">
       <div className="bg-white rounded-lg shadow-lg w-full max-w-lg p-8 space-y-8">
         <div className="flex flex-col items-center space-y-6">
           {/* Logo */}
-          <div className="flex items-center justify-center">
-           <img 
-            src={myImage}  
-            alt="CURE.AI Logo" 
-            className="w-[10] h-[10]" 
-            />
-          </div>
-          {/* Brand Name */}
-          <div className="text-blue-600 text-2xl font-bold">
-            CURE.AI
+          <div className="text-blue-600">
+              <img 
+                src={myImage}  
+                alt="CURE.AI Logo" 
+                className="w-40 h-40" 
+              />
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-3xl font-semibold text-center">
+          <h1 className="text-2xl font-semibold text-center">
             Your Trusted AI Healthcare Partner
           </h1>
 
@@ -45,4 +41,4 @@ const CureAILanding = () => {
   );
 };
 
-export default CureAILanding;
+export default Screen1;

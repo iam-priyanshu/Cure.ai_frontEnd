@@ -15,7 +15,7 @@ const Screen5 = () => {
 
           {/* Profile Card */}
           <div className="bg-white rounded-2xl shadow-lg p-6 flex-1 flex flex-col">
-            <img src={myImage} alt="CURE.AI Logo" className="w-36 h-36 mb-2 mx-auto" />
+            <img src={myImage} alt="CURE.AI Logo" className="w-40 h-40 mb-2 mx-auto" />
             <div className="flex flex-col items-center">
               <div className="relative">
                 <div className="bg-gray-100 rounded-full p-4 w-20 h-20 flex items-center justify-center mb-4">

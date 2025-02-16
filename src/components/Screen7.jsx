@@ -1,71 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import myImage from "../assets/cureAiLogo.png";
 
-const Screen7 = () => {
+const Screen9 = () => {
+  const [otp, setOtp] = useState('');
+
+  const handleOtpChange = (e) => {
+    const value = e.target.value;
+    if (value === '' || (/^\d+$/.test(value) && value.length <= 6)) {
+      setOtp(value);
+    }
+  };
+
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      {/* Left Sidebar */}
-      <div className="w-80 bg-white shadow-lg p-6 flex flex-col">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center">
-          <div className="text-center">
-            <img 
-              src={myImage}  // ✅ Use the imported image
-              alt="CURE.AI Logo" 
-              className="w-52 mb-1"
-            />
-            <h1 className="text-blue-600 text-2xl font-bold"></h1>
-          </div>
-        </div>
-        
-        {/* Profile Card */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-          <div className="flex flex-col items-center">
-            <div className="w-24 h-24 mb-4">
-              <svg viewBox="0 0 100 100" className="w-full h-full text-gray-400">
-                <circle cx="50" cy="35" r="20" fill="currentColor" />
-                <path 
-                  d="M10,85 C10,65 90,65 90,85" 
-                  fill="currentColor"
-                  stroke="none"
-                />
-              </svg>
+    <div className="min-h-screen w-full bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-6xl bg-white rounded-3xl shadow-lg">
+        <div className="flex flex-col lg:flex-row min-h-[600px]">
+          {/* Left Column */}
+          <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col items-center lg:items-start justify-center">
+            {/* Logo */}
+            <div className="w-52 h-52 mb-8">
+              <img
+                src={myImage}
+                alt="CURE.AI Logo"
+                className="w-40 h-40 object-contain"
+              />
             </div>
-            <h2 className="text-xl font-semibold mb-1">Rahul Gandhi</h2>
-            <p className="text-gray-600 mb-1">Age: 43 years</p>
-            <p className="text-gray-600">Male</p>
+            
+            {/* Tagline */}
+            <h1 className="text-2xl md:text-4xl font-medium text-top lg:text-left leading-tight">
+              Your Trusted AI<br />Healthcare<br />Partner
+            </h1>
           </div>
-          
-          <hr className="my-6" />
-          
-          <button className="w-full text-left text-gray-700 font-medium">
-            Previous Conversation
-          </button>
-        </div>
-        
-        {/* Upload Button */}
-        <button className="bg-green-500 hover:bg-green-600 text-white rounded-full py-3 px-6 flex items-center justify-center mb-8 transition duration-200">
-          Upload Now
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-          </svg>
-        </button>
-        
-        {/* End Conversation Button */}
-        <button className="bg-red-500 hover:bg-red-600 text-white rounded-full py-3 px-6 mt-auto transition duration-200">
-          End Conversation
-        </button>
-      </div>
-      
-      {/* Main Content Area */}
-      <div className="flex-1 p-8">
-        {/* This is the empty white space for conversation */}
-        <div className="bg-white rounded-2xl shadow-lg h-full w-full p-8">
-          {/* Conversation content will go here */}
+
+          {/* Right Column */}
+          <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col items-center justify-center">
+            <div className="w-full max-w-md space-y-8">
+              {/* OTP Header */}
+              <div className="text-center lg:text-left">
+                <h2 className="text-2xl md:text-3xl text-gray-700 font-medium mb-2">
+                  Enter the OTP received on
+                </h2>
+                <p className="text-gray-600">
+                  abc@gmail.com or 92112121212
+                </p>
+              </div>
+
+              {/* OTP Input */}
+              <div className="w-full">
+                <input
+                  type="text"
+                  value={otp}
+                  onChange={handleOtpChange}
+                  placeholder="Enter 6 digit OTP"
+                  className="w-full h-16 px-4 border border-gray-200 rounded-lg text-center text-lg focus:outline-none focus:border-blue-500 transition-colors"
+                  maxLength={6}
+                />
+              </div>
+
+              {/* Chat Now Button */}
+              <button className="w-full h-12 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
+                Chat Now
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Screen7;
+export default Screen9;

@@ -1,67 +1,59 @@
-import React, { useState } from 'react';
-import myImage from "../assets/cureAiLogo.png";
-
-const Screen9 = () => {
-  const [otp, setOtp] = useState('');
-
-  const handleOtpChange = (e) => {
-    const value = e.target.value;
-    if (value === '' || (/^\d+$/.test(value) && value.length <= 6)) {
-      setOtp(value);
-    }
-  };
-
+import React from 'react';
+import { User, ArrowUpRight } from 'lucide-react';
+import myImage from '../assets/cureAiLogo.png';
+const MedicalProfile = () => {
   return (
-    <div className="min-h-screen w-full bg-gray-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl bg-white rounded-3xl shadow-lg">
-        <div className="flex flex-col lg:flex-row min-h-[600px]">
-          {/* Left Column */}
-          <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col items-center lg:items-start justify-center">
-            {/* Logo */}
-            <div className="w-52 h-52 mb-8">
-              <img
+    <div className="h-screen w-screen bg-[#FAFAFA] overflow-hidden">
+      <div className="h-full w-full flex flex-col lg:flex-row">
+        {/* Left sidebar */}
+        <div className="w-80 bg-white shadow-lg p-6 flex flex-col">
+          {/* Logo */}
+          <div className="h-[100px] lg:h-[140px] flex items-center justify-center">
+            <div className="w-28 h-28 lg:w-32 lg:h-32">
+              <img 
                 src={myImage}
-                alt="CURE.AI Logo"
-                className="w-full h-full object-contain"
+                alt="CURE.AI Logo" 
+                className="w-40 h-40 object-contain"
               />
             </div>
-            
-            {/* Tagline */}
-            <h1 className="text-2xl md:text-4xl font-medium text-center lg:text-left leading-tight">
-              Your Trusted AI<br />Healthcare<br />Partner
-            </h1>
           </div>
 
-          {/* Right Column */}
-          <div className="w-full lg:w-1/2 p-8 lg:p-16 flex flex-col items-center justify-center">
-            <div className="w-full max-w-md space-y-8">
-              {/* OTP Header */}
-              <div className="text-center lg:text-left">
-                <h2 className="text-2xl md:text-3xl text-gray-700 font-medium mb-2">
-                  Enter the OTP received on
-                </h2>
-                <p className="text-gray-600">
-                  abc@gmail.com or 92112121212
-                </p>
-              </div>
-
-              {/* OTP Input */}
-              <div className="w-full">
-                <input
-                  type="text"
-                  value={otp}
-                  onChange={handleOtpChange}
-                  placeholder="Enter 6 digit OTP"
-                  className="w-full h-16 px-4 border border-gray-200 rounded-lg text-center text-lg focus:outline-none focus:border-blue-500 transition-colors"
-                  maxLength={6}
-                />
-              </div>
-
-              {/* Chat Now Button */}
-              <button className="w-full h-12 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors">
-                Chat Now
-              </button>
+          {/* Profile section */}
+          <div className="flex-1 flex flex-col items-center space-y-6">
+            <div className="w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] rounded-full bg-gray-200 flex items-center justify-center">
+              <User size={48} className="text-gray-500 lg:w-16 lg:h-16" />
             </div>
+            <div className="space-y-2 text-center">
+              <p className="text-xl lg:text-2xl">Rahul Gandhi</p>
+              <p className="text-xl lg:text-2xl">Age: 43 years</p>
+              <p className="text-xl lg:text-2xl">Male</p>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="border-t border-gray-200 my-4 lg:my-6"></div>
+
+          {/* Previous Conversation */}
+          <div className="text-lg lg:text-xl font-medium text-center mb-6">
+            Previous Conversation
+          </div>
+
+          {/* Upload Now Button */}
+          <button className="w-full bg-[#22C55E] text-white py-3 rounded-lg hover:bg-[#1EA750] transition-colors flex items-center justify-center space-x-2">
+            <span className="text-lg">Upload Now</span>
+            <ArrowUpRight className="w-5 h-5" />
+          </button>
+
+          {/* End Conversation Button */}
+          <button className="mt-4 w-full bg-[#FF4141] text-white py-3 rounded-lg hover:bg-[#FF2525] transition-colors">
+            End Conversation
+          </button>
+        </div>
+
+        {/* Main content area */}
+        <div className="bg-white rounded-lg shadow-sm p-4 flex items-center gap-3">
+          <div className="w-full max-w-4xl h-full bg-white rounded-3xl shadow-lg">
+            {/* Content will go here */}
           </div>
         </div>
       </div>
@@ -69,4 +61,4 @@ const Screen9 = () => {
   );
 };
 
-export default Screen9;
+export default MedicalProfile;

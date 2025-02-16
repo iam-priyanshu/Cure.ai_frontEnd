@@ -12,12 +12,12 @@ const Screen8 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Section */}
           <div className="flex flex-col items-center justify-center space-y-4">
-            {/* Logo with exact 70x70 size */}
+            {/* Logo with exact 40x40 size */}
             <div className="flex items-center justify-center">
               <img 
                 src={myImage}  
                 alt="CURE.AI Logo" 
-                className="w-[60] h-[60]" 
+                className="w-40 h-40" 
               />
             </div>
             <h1 className="text-2xl md:text-3xl font-medium text-center">

@@ -6,36 +6,32 @@ const Screen10 = () => {
   return (
     <div className="flex flex-col md:flex-row h-screen bg-white">
       {/* Left sidebar - patient info */}
-      <div className="w-full md:w-80 md:min-h-screen p-6 flex flex-col border-r border-gray-200 md:sticky md:top-0">
-        <div className="flex items-center mb-10">
-        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white">
-            <div className="w-6 h-6 rounded-full border-2 border-white"></div>
-          </div>
-          <span className="ml-2 text-blue-600 font-bold text-xl">CURE.AI</span>
-        </div>
-        
-        <div className="flex flex-col items-center mb-8">
-          <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <h2 className="text-xl font-semibold mb-1">Rahul Gandhi</h2>
-          <p className="text-gray-500 text-sm mb-1">Age: 43 years</p>
-          <p className="text-gray-500 text-sm">Male</p>
-        </div>
-        
-        <div className="border-t border-gray-200 pt-6 mb-6">
-          <p className="text-gray-600 mb-4">Previous Conversation</p>
-        </div>
-        
-        <div className="mt-auto">
-          <button className="w-full bg-red-500 text-white rounded-md py-3">
-            End Consultation
-          </button>
-        </div>
-      </div>
+      <div className="w-80 bg-white shadow-lg p-6 flex flex-col">
+              {/* Logo */}
+              <div className="flex flex-col items-center mb-8">
+                <img src={myImage} 
+                alt="CURE.AI Logo" 
+                className="w-36 h-36 mb-2" 
+                />
+              </div>
+      
+              {/* Profile Section */}
+              <div className="text-center mb-8">
+                <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-16 h-16 text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+                <h2 className="text-xl font-semibold mb-1">Rahul Gandhi</h2>
+                <p className="text-gray-600 mb-1">Age: 43 years</p>
+                <p className="text-gray-600">Male</p>
+              </div>
+      
+              {/* End Button */}
+              <button className="mt-auto bg-red-500 text-white py-3 px-4 rounded-lg hover:bg-red-600 transition-colors duration-200">
+                End Consultation
+              </button>
+            </div>
       
       {/* Main content - document upload */}
       <div className="flex-1 flex flex-col min-h-screen">

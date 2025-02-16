@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Screen1 />} />
           <Route path="/recapcha" element={<Recaptcha />} />
-          <Route path="/screen1" element={<Screen />} />
+          
           <Route path="/screen2" element={<Screen2 />} />
           <Route path="/screen3" element={<Screen3 />} />
           <Route path="/screen4" element={<Screen4 />} />

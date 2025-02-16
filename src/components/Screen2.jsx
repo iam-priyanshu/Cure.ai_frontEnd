@@ -27,8 +27,10 @@ const Screen2 = () => {
         {/* Logo Section */}
         <div className="flex justify-center mb-8">
           <div className="flex flex-col items-center space-y-2">
-            <img src={myImage} alt="CURE.AI Logo" className="w-30 h-30" />
-            <span className="text-blue-600 text-2xl font-bold">CURE.AI</span>
+            <img src={myImage} 
+            alt="CURE.AI Logo" 
+            className= "w-40 h-40" 
+            />
           </div>
         </div>
 
